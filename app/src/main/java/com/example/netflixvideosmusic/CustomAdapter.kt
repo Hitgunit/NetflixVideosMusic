@@ -10,7 +10,10 @@ import androidx.recyclerview.widget.RecyclerView
 
 class CustomAdapter(var media: List<Media>):RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+        var itemTitle: TextView = itemView.findViewById(R.id.itemTitle)
+        var itemDetalle: TextView = itemView.findViewById(R.id.itemDetalle)
+    }
 
     //Cuando crea la variables por primera vez
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -25,7 +28,8 @@ class CustomAdapter(var media: List<Media>):RecyclerView.Adapter<CustomAdapter.V
 
     //Poblar cada elemento
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.itemView
+        holder.itemTitle.text = media[position].name
+        holder.itemDetalle.text = media[position].name
     }
 }
 
