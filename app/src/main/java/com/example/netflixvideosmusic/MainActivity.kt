@@ -35,16 +35,14 @@ class MainActivity : AppCompatActivity() {
             mutableListOf(
                 Media("Video", "Hola soy una descripcion", R.drawable.ic_launcher_foreground)
             )
-
         }else{
             mutableListOf(
                 Media("Musica", "Hola soy una musica", R.drawable.ic_launcher_background)
-
             )
         }
 
 
-        val adapter = CustomAdapter(mediaList)
+        val adapter = CustomAdapter(mediaList, tipo, this)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
     }

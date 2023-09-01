@@ -1,5 +1,7 @@
 package com.example.netflixvideosmusic
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,7 +10,7 @@ import android.widget.ListAdapter
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class CustomAdapter(var media: List<Media>):RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
+class CustomAdapter(var media: List<Media>, var tipo: String, var contexto: Context):RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         var itemTitle: TextView = itemView.findViewById(R.id.itemTitle)
@@ -29,7 +31,7 @@ class CustomAdapter(var media: List<Media>):RecyclerView.Adapter<CustomAdapter.V
     //Poblar cada elemento
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.itemTitle.text = media[position].name
-        holder.itemDetalle.text = media[position].name
+        holder.itemDetalle.text = media[position].description
     }
 }
 
