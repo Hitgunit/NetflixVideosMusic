@@ -21,8 +21,6 @@
             android:textColor="@color/black"
             android:id="@+id/itemTitle"
             android:textStyle="bold"
-            android:layout_toEndOf="@id/itemImage"
-            android:layout_toRightOf="@id/itemImage"
             android:layout_alignParentTop="true"
             android:textSize="30sp"/>
 
@@ -33,8 +31,6 @@
             android:textColor="@color/black"
             android:id="@+id/itemDetalle"
             android:textStyle="bold"
-            android:layout_toEndOf="@id/itemImage"
-            android:layout_toRightOf="@id/itemImage"
             android:layout_below="@id/itemTitle"/>
 
 

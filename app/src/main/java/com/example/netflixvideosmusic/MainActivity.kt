@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var mediaList: MutableList<Media>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         this.supportActionBar?.hide()
@@ -24,23 +26,26 @@ class MainActivity : AppCompatActivity() {
             StartRecycler("musica")
         }
 
-        var mediaList = mutableListOf(
-            Media("Adair", "Hola soy una descripcion", R.drawable.ic_launcher_foreground)
-        )
-
-        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-        val adapter = CustomAdapter(mediaList)
-
-        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        recyclerView.adapter = adapter
     }
 
     fun StartRecycler(tipo:String){
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
-        if (tipo == "video"){
-            
-        }else{
 
+        mediaList = if (tipo == "video"){
+            mutableListOf(
+                Media("Video", "Hola soy una descripcion", R.drawable.ic_launcher_foreground)
+            )
+
+        }else{
+            mutableListOf(
+                Media("Musica", "Hola soy una musica", R.drawable.ic_launcher_background)
+
+            )
         }
+
+
+        val adapter = CustomAdapter(mediaList)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = adapter
     }
 }
