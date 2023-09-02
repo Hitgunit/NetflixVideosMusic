@@ -35,15 +35,28 @@ class MainActivity : AppCompatActivity() {
         mediaList = if (tipo == "video"){
             mutableListOf(
                 Media("Bottoms", "El trailer de bottoms", R.raw.bottoms),
-                Media("Video 2", "Hola soy una descripcion2" , R.drawable.ic_launcher_background),
-                Media("Video", "Hola soy una descripcion", R.drawable.ic_launcher_foreground),
-                Media("Video 2", "Hola soy una descripcion2" , R.drawable.ic_launcher_background)
-
-
+                Media("Video 2", "Hola soy una descripcion2" , R.raw.cyberpunk),
+                Media("Video", "Hola soy una descripcion", R.raw.edgerunners),
+                Media("Video 2", "Hola soy una descripcion2" , R.raw.ferrari),
+                Media("Video 2", "Hola soy una descripcion2" , R.raw.jesus),
+                Media("Video", "Hola soy una descripcion", R.raw.jhonwick),
+                Media("Video 2", "Hola soy una descripcion2" , R.raw.mortalkombat),
+                Media("Video", "Hola soy una descripcion", R.raw.napoleon),
+                Media("Video 2", "Hola soy una descripcion2" , R.raw.onepiece),
+                Media("Video", "Hola soy una descripcion", R.raw.thekillers)
             )
         }else{
             mutableListOf(
-                Media("Another Day", "Esta es la cancion de another day", R.raw.anotherday)
+                Media("Musica", "El trailer de bottoms", R.raw.anotherday),
+                Media("Video 2", "Hola soy una descripcion2" , R.raw.childrenofthesky),
+                Media("Video", "Hola soy una descripcion", R.raw.chlorine),
+                Media("Video 2", "Hola soy una descripcion2" , R.raw.contenta),
+                Media("Video 2", "Hola soy una descripcion2" , R.raw.holdinontotoyou),
+                Media("Video", "Hola soy una descripcion", R.raw.lacuriosidad),
+                Media("Video 2", "Hola soy una descripcion2" , R.raw.lowlife),
+                Media("Video", "Hola soy una descripcion", R.raw.notion),
+                Media("Video 2", "Hola soy una descripcion2" , R.raw.queeseso),
+                Media("Video", "Hola soy una descripcion", R.raw.somethingreal)
             )
         }
 

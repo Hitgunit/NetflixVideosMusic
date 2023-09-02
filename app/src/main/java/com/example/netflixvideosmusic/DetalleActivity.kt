@@ -40,12 +40,14 @@ class DetalleActivity : AppCompatActivity() {
             txtTittle.text = data.name
             txtDetalle.text = data.description
 
-            //Se asgina el mediacontroller
-            val mediaController = MediaController(this)
-            mediaController.setAnchorView(videoView)
+
 
             //Se añade el URL de uri
             val uri = Uri.parse("android.resource://$packageName/${data.url}")
+
+            //Se asgina el mediacontroller
+            val mediaController = MediaController(this)
+            mediaController.setAnchorView(videoView)
 
             //Se le asigna el Uri deseado
             videoView.setMediaController(mediaController)
