@@ -33,7 +33,12 @@ class MainActivity : AppCompatActivity() {
 
         mediaList = if (tipo == "video"){
             mutableListOf(
-                Media("Video", "Hola soy una descripcion", R.drawable.ic_launcher_foreground)
+                Media("Video", "Hola soy una descripcion", R.drawable.ic_launcher_foreground),
+                Media("Video 2", "Hola soy una descripcion2" , R.drawable.ic_launcher_background),
+                Media("Video", "Hola soy una descripcion", R.drawable.ic_launcher_foreground),
+                Media("Video 2", "Hola soy una descripcion2" , R.drawable.ic_launcher_background)
+
+
             )
         }else{
             mutableListOf(
@@ -42,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        val adapter = CustomAdapter(mediaList, tipo, this)
+        val adapter = CustomAdapter(mediaList, tipo)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
     }

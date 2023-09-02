@@ -10,7 +10,7 @@ import android.widget.ListAdapter
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class CustomAdapter(var media: List<Media>, var tipo: String, var contexto: Context):RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
+class CustomAdapter(var media: List<Media>, var tipo: String):RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         var itemTitle: TextView = itemView.findViewById(R.id.itemTitle)
