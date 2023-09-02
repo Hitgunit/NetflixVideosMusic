@@ -1,5 +1,6 @@
 package com.example.netflixvideosmusic
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -47,8 +48,15 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        val adapter = CustomAdapter(mediaList, tipo)
+        val adapter = CustomAdapter(mediaList)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
+
+        //Se le indica que hacer cuando recibe un clik dentro el mismo card
+        adapter.onItemClick={
+            val intent = Intent(this, DetalleActivity::class.java)
+            intent.putExtra("media", it)
+            startActivity(intent)
+        }
     }
 }
