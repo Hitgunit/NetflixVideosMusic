@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
 
         mediaList = if (tipo == "video"){
             mutableListOf(
-                Media("Video", "Hola soy una descripcion", R.drawable.ic_launcher_foreground),
+                Media("Bottoms", "El trailer de bottoms", R.raw.bottoms),
                 Media("Video 2", "Hola soy una descripcion2" , R.drawable.ic_launcher_background),
                 Media("Video", "Hola soy una descripcion", R.drawable.ic_launcher_foreground),
                 Media("Video 2", "Hola soy una descripcion2" , R.drawable.ic_launcher_background)
@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
             )
         }else{
             mutableListOf(
-                Media("Musica", "Hola soy una musica", R.drawable.ic_launcher_background)
+                Media("Another Day", "Esta es la cancion de another day", R.raw.anotherday)
             )
         }
 
