@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class CustomAdapter(var media: List<Media>):RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 
+    //Se crea una variable para mandar un unit
     var onItemClick: ((Media) -> Unit)?= null
 
     //Llama lo que se desea poblar
