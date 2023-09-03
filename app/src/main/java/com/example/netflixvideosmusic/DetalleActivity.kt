@@ -71,7 +71,7 @@ class DetalleActivity : AppCompatActivity() {
             if (!anuncioPlaying) {
                 anuncioPlaying = true
                 GlobalScope.launch(Dispatchers.Main) {
-                    val tiempo = Random(2000L, 10000L)
+                    val tiempo = Random(2000L, 30000L)
                     delay(tiempo)
                     //Guarda la posicion del video
                     videoPosition = videoView.currentPosition
