@@ -58,5 +58,15 @@
         app:layout_constraintTop_toBottomOf="@+id/LinearLayout"
         app:layout_constraintVertical_bias="0.5" />
 
+    <Button
+        android:id="@+id/btnSaltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saltar anuncio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LinearLayout"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

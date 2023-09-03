@@ -34,33 +34,33 @@ class MainActivity : AppCompatActivity() {
 
         mediaList = if (tipo == "video"){
             mutableListOf(
-                Media("Bottoms", "El trailer de bottoms", R.raw.bottoms),
-                Media("Video 2", "Hola soy una descripcion2" , R.raw.cyberpunk),
-                Media("Video", "Hola soy una descripcion", R.raw.edgerunners),
-                Media("Video 2", "Hola soy una descripcion2" , R.raw.ferrari),
-                Media("Video 2", "Hola soy una descripcion2" , R.raw.jesus),
-                Media("Video", "Hola soy una descripcion", R.raw.jhonwick),
-                Media("Video 2", "Hola soy una descripcion2" , R.raw.mortalkombat),
-                Media("Video", "Hola soy una descripcion", R.raw.napoleon),
-                Media("Video 2", "Hola soy una descripcion2" , R.raw.onepiece),
-                Media("Video", "Hola soy una descripcion", R.raw.thekillers)
+                Media("Bottoms Trailer", "El trailer de bottoms", R.raw.bottoms),
+                Media("CyberPunk Trailer", "El trailer de cyberpunk" , R.raw.cyberpunk),
+                Media("Edgerunners Trailer", "El trailer de edgerunners", R.raw.edgerunners),
+                Media("Ferrari Trailer", "El trailer de ferrari" , R.raw.ferrari),
+                Media("Jesus Trailer", "El trailer de jesus" , R.raw.jesus),
+                Media("Jhon Wick Trailer", "El trailer de jhon wick", R.raw.jhonwick),
+                Media("Mortal Kombat Trailer", "El trailer de mortal kombat" , R.raw.mortalkombat),
+                Media("Napoleon Trailer", "El trailer de napoleon", R.raw.napoleon),
+                Media("One Piece Trailer", "El trailer de one piece" , R.raw.onepiece),
+                Media("The Killers Trailer", "El trailer de the killers", R.raw.thekillers)
             )
         }else{
             mutableListOf(
-                Media("Musica", "El trailer de bottoms", R.raw.anotherday),
-                Media("Video 2", "Hola soy una descripcion2" , R.raw.childrenofthesky),
-                Media("Video", "Hola soy una descripcion", R.raw.chlorine),
-                Media("Video 2", "Hola soy una descripcion2" , R.raw.contenta),
-                Media("Video 2", "Hola soy una descripcion2" , R.raw.holdinontotoyou),
-                Media("Video", "Hola soy una descripcion", R.raw.lacuriosidad),
-                Media("Video 2", "Hola soy una descripcion2" , R.raw.lowlife),
-                Media("Video", "Hola soy una descripcion", R.raw.notion),
-                Media("Video 2", "Hola soy una descripcion2" , R.raw.queeseso),
-                Media("Video", "Hola soy una descripcion", R.raw.somethingreal)
+                Media("Another Day", "Los recoditos", R.raw.anotherday),
+                Media("Children of the sky", "Imagine Dragons" , R.raw.childrenofthesky),
+                Media("Chlorine", "Twenty One Pilots", R.raw.chlorine),
+                Media("Contenta", "Ed Maverick" , R.raw.contenta),
+                Media("Holdin on to you", "Twenty One Pilots" , R.raw.holdinontotoyou),
+                Media("La curiosidad", "Grupo chido", R.raw.lacuriosidad),
+                Media("LowLife", "Jorgitos" , R.raw.lowlife),
+                Media("Notion", "Perez Prado", R.raw.notion),
+                Media("Que es eso", "No se" , R.raw.queeseso),
+                Media("Something Real", "Post Malone", R.raw.somethingreal)
             )
         }
 
-
+        //Se agrega la lista de canciones videos
         val adapter = CustomAdapter(mediaList)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
