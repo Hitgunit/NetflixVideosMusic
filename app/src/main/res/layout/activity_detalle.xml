@@ -62,7 +62,7 @@
         android:id="@+id/btnSaltar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Saltar anuncio"
+        android:text="Saltar en 5s"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LinearLayout"
         android:layout_marginTop="16dp"
